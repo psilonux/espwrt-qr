@@ -48,8 +48,6 @@ void setup()
     Serial.printf("[QR]\t Initialising qrcode...\n");
     qrcode.init();
 
-    //WiFi.mode(WIFI_STA);
-    //Serial.printf("[WIFI]\t Mode set to %s\n", WiFi.mode(WIFI_STA) ? "" : "Failed!");
     Serial.printf("[WIFI]\t Start connecting to %s\n", ssid);
     WiFiMulti.addAP(ssid, password);
     while (WiFiMulti.run() != WL_CONNECTED)

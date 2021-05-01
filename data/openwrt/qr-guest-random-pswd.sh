@@ -1,12 +1,15 @@
 #!/bin/sh
 #
-# This script updates the given (guest) SSID with a random password and reloads the configuration
-# A file in www folder is updated with the string needed to generate a qr-code for wifi login
+# Add this script to cron with
+# This script updates the given SSID with a random password and reloads the wifi configuration.
+# A txt file in www folder is updated with the string needed to generate a qr-code for wifi login
 
-ssid="***REMOVED***"
+## Replace with your guest ssid name
+ssid="GUEST_SSID_NAME_HERE"
 title="WiFi-code for ${ssid}"
 html="/www/guest.html"
 txt="/www/guest.txt"
+
 pswd=$(cat /dev/urandom | \
 		env LC_CTYPE=C tr -dc _ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjklmnpqrstuvwxyz23456789- | \
 		head -c 12;)
@@ -29,11 +32,12 @@ handle_txt(){
     printf "%s" "${1}" > ${txt}
 }
 
-for i in $(seq 0 4); do # Try 4 interfaces for guest ssid
+## Loop trhough 4 interfaces for guest ssid, increase if you have lots of interfaces
+for i in $(seq 0 4); do
     if [ $(uci get wireless.@wifi-iface[$i].ssid) == ${ssid} ]; then
-#	uci set wireless.@wifi-iface[${i}].key=${pswd}
-#	uci commit wireless
-#	wifi
+	uci set wireless.@wifi-iface[${i}].key=${pswd}
+	uci commit wireless
+	wifi
 	logger -t qr-guest "Wifi password for SSID: ${ssid} changed to ${pswd}"
 	sleep 1
 	handle_txt "WIFI:S:${ssid};T:WPA;P:${pswd};"

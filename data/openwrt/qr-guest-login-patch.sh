@@ -3,11 +3,12 @@
 # Script from @dibdot for patching luci login screen with wifi qr-code
 # https://forum.openwrt.org/t/guest-wifi-qr-code-via-luci-app-commands/57180/18
 #
+# Make sure you have qrencode installed!
 
 . /lib/functions.sh
 
 ssid_list=""
-guest_ssid="***REMOVED***"  ## Use "${1}" to add ssid as cli parameter
+guest_ssid="GUEST_SSID_NAME"  ## Replace with your guest ssid name
 luci_file="/usr/lib/lua/luci/view/sysauth.htm"
 backup_file="/usr/lib/lua/luci/view/sysauth.htm.backup"
 

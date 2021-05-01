@@ -5,8 +5,8 @@
 #include <TFT_eSPI.h>
 #include <qrcode.h>
 
-const char *ssid = "SSID";                          // The SSID (name) of the native Wi-Fi network you want to connect to
-const char *password = "PASSWORD";                  // The password of the native Wi-Fi network
+const char *ssid = "***REMOVED***";                          // The SSID (name) of the native Wi-Fi network you want to connect to
+const char *password = "***REMOVED***";                  // The password of the native Wi-Fi network
 const char *url = "https://openwrt.lan/guest.txt";  // The URL to a ASCII text file with the wifi qr-code string
 
 // Fingerprint in hex format of the url ssl certificate
@@ -19,16 +19,13 @@ const unsigned long SECOND = 1000; // 1 second = 1000 milliseconds
 //const unsigned long HOUR = 3600 * SECOND;
 
 ESP8266WiFiMulti WiFiMulti;
-IPAddress IP;
 
 TFT_eSPI tft = TFT_eSPI();
 QRcode qrcode(&tft);
 
 void setup()
 {
-
     Serial.begin(115200);
-    // Serial.setDebugOutput(true);
 
     Serial.println();
     Serial.println();

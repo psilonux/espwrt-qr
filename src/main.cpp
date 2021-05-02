@@ -5,9 +5,9 @@
 #include <TFT_eSPI.h>
 #include <qrcode.h>
 
-const char *ssid = "WWiFi";                          // The SSID (name) of the native Wi-Fi network you want to connect to
-const char *password = "Tottie&Niels&Frodo";                  // The password of the native Wi-Fi network
-const char *url = "https://openwrt-apu4.lan/guest.txt";  // The URL to a ASCII text file with the wifi qr-code string
+const char *ssid = "WiFi";                          // The SSID (name) of the native Wi-Fi network you want to connect to
+const char *password = "SecretPassword";                  // The password of the native Wi-Fi network
+const char *url = "https://openwrt.lan/guest.txt";  // The URL to a ASCII text file with the wifi qr-code string
 
 // Fingerprint in hex format of the url ssl certificate
 // https://stackoverflow.com/questions/5164804/get-certificate-fingerprint-of-https-server-from-command-line

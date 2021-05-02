@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 .include
-=======
-passwords.txt
->>>>>>> c3fbe027f8e00a9ff4c2be3dcb3cdbde5bf9941e
 .pio
 .vscode
-
+include/README
+passwords.txt

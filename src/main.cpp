@@ -6,7 +6,11 @@
 #include <qrcode.h>
 
 const char *ssid = "WiFi";                          // The SSID (name) of the native Wi-Fi network you want to connect to
+<<<<<<< HEAD
 const char *password = "SecretPassword";            // The password of the native Wi-Fi network
+=======
+const char *password = "SecretPassword";                  // The password of the native Wi-Fi network
+>>>>>>> c3fbe027f8e00a9ff4c2be3dcb3cdbde5bf9941e
 const char *url = "https://openwrt.lan/guest.txt";  // The URL to a ASCII text file with the wifi qr-code string
 
 // Fingerprint in hex format of the url ssl certificate

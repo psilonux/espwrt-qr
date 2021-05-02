@@ -5,8 +5,8 @@
 #include <TFT_eSPI.h>
 #include <qrcode.h>
 
-const char *ssid = "***REMOVED***";                          // The SSID (name) of the native Wi-Fi network you want to connect to
-const char *password = "***REMOVED***";                  // The password of the native Wi-Fi network
+const char *ssid = "WiFi";                          // The SSID (name) of the native Wi-Fi network you want to connect to
+const char *password = "SecretPassword";                  // The password of the native Wi-Fi network
 const char *url = "https://openwrt.lan/guest.txt";  // The URL to a ASCII text file with the wifi qr-code string
 
 // Fingerprint in hex format of the url ssl certificate

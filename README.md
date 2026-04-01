@@ -8,4 +8,4 @@ To avoid typing random characters, a qr-code thats automatically connects to the
 
 A cron script on Openwrt changes the guest wifi password every night with a random generated 12 character string.
 A QR-code is generated on the Luci login page and also a simple text file in the www folder with the QR-code payload.
-The ESP8266 together with a ST7789 LCD-screen refreshes the payload over the main wifi and the display generates a QR-code which a phone can scan.
+The ESP8266 (NodeMCU) together with a ST7789 LCD-screen refreshes the payload over the main wifi and the display generates a QR-code which a phone can scan.

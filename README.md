@@ -1,6 +1,6 @@
 The idea for this little project was to keep the Guest Wi-Fi secure but still practical for visitors at home.
 
-When people come over to visit and ask for the Wi-Fi password, it's good practise to offer them internet acces via a sepearte guest vlan.
+When people come over to visit and ask for the Wi-Fi password, it's good practise to offer them internet access via a sepearte guest vlan.
 
 Not everyone can be trusted these days, so I rotate random generated passwords each day for the guest wifi.
 
